@@ -1,0 +1,23 @@
+{
+    "name": "emretnrvrd/tckn-helpers",
+    "authors": [
+        {
+            "name": "Emre Tanrıverdi",
+            "email": "emretanriverdi28@gmail.com",
+            "homepage": "https://github.com/emretnrvrd"
+        }
+    ],
+    "description": "This package enables algorithmic validation of Turkish Republic Identification Numbers (TCKN) and generates fake TCKN for testing purposes in a straightforward way.",
+    "type": "library",
+    "keywords": ["tckn", "tc kimlik", "doğrulama", "validator", "verify", "helpers"],
+    "autoload": {
+        "psr-4": {
+            "Emretnrvrd\\TcknHelpers\\": "src/"
+        }
+    },
+    "version": "1.0.0",
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.4"
+    }
+}

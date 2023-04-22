@@ -12,6 +12,14 @@ class Tckn
     private string $value;
 
     /**
+     * @return string
+     */
+    public function getValue(): string
+    {
+        return $this->value;
+    }
+
+    /**
      * @param string|int|null $tckn
      */
     public function __construct(string $tckn = null)
@@ -60,7 +68,7 @@ class Tckn
         $randomTenNumber = $random . $this->findTenthNumber($random);
         $randomElevenNumber = $randomTenNumber . $this->findEleventhNumber($randomTenNumber);
 
-        return $this->value = $randomElevenNumber;
+        return $randomElevenNumber;
     }
 
     /**

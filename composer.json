@@ -9,7 +9,7 @@
     ],
     "description": "This package enables algorithmic validation of Turkish Republic Identification Numbers (TCKN) and generates fake TCKN for testing purposes in a straightforward way.",
     "type": "library",
-    "keywords": ["tckn", "tc kimlik NO", "doğrulama", "validator", "verify", "helpers"],
+    "keywords": ["tckn", "tc kimlik no", "doğrulama", "validator", "verify", "helpers"],
     "autoload": {
         "psr-4": {
             "Emretnrvrd\\TcknHelpers\\": "src/"

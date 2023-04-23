@@ -58,7 +58,7 @@ $tckn = new Tckn();
 
 $randomTckn = $tckn->generate();
 
-$tckn->setValue(randomTckn);
+$tckn->setValue($randomTckn);
 
 $tckn->getValue(); 
 //44873515636

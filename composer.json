@@ -10,17 +10,27 @@
     "description": "This package enables algorithmic validation of Turkish Republic Identification Numbers (TCKN) and generates fake TCKN for testing purposes in a straightforward way.",
     "type": "library",
     "keywords": ["tckn", "tc kimlik no", "doğrulama", "validator", "verify", "helpers"],
-    "autoload": {
-        "psr-4": {
-            "Emretnrvrd\\TcknHelpers\\": "src/"
-        }
-    },
-    "version": "1.0.1",
     "minimum-stability": "stable",
+    "version": "1.0.2",
     "require": {
         "php": ">=7.4"
     },
+    "autoload": {
+        "psr-4": {
+            "Emretnrvrd\\TcknHelpers\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
     "license": "MIT",
     "homepage": "https://github.com/emretnrvrd/tckn-helpers-php",
-    "readme": "README.md"
+    "readme": "README.md",
+    "support": {
+        "issues": "https://github.com/emretnrvrd/tckn-helpers-php/issues",
+        "source": "https://github.com/emretnrvrd/tckn-helpers-php"
+    }
 }

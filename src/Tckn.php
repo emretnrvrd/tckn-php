@@ -2,8 +2,6 @@
 
 namespace Emretnrvrd\TcknHelpers;
 
-use Exception;
-
 class Tckn
 {
     /**
@@ -20,7 +18,7 @@ class Tckn
     }
 
     /**
-     * @param string|int|null $tckn
+     * @param string|int $tckn
      */
     public function __construct(string $tckn = null)
     {
@@ -49,7 +47,7 @@ class Tckn
     public function validate(): bool
     {
         if (!isset($this->value)) {
-            throw new Exception('TCKN value must not be null.');
+            throw new \Exception('TCKN value must not be null.');
         }
         return $this->validateLength() &&
             $this->validateFirstNumber() &&
@@ -62,7 +60,7 @@ class Tckn
      *
      * @return string
      */
-    public function generate(): string
+    public function random(): string
     {
         $random = (string)random_int(100_000_000, 999_999_999);
         $randomTenNumber = $random . $this->findTenthNumber($random);
@@ -78,8 +76,7 @@ class Tckn
      */
     private function validateFirstNumber(): bool
     {
-        return substr($this->value, 0, 1 ) != "0";
-//        return !str_starts_with($this->value, "0");
+        return substr($this->value, 0, 1) != "0";
     }
 
     /**
@@ -152,4 +149,3 @@ class Tckn
         return array_sum(str_split($firstTenNumber)) % 10;
     }
 }
-

@@ -1,70 +1,115 @@
+![Logo](https://repository-images.githubusercontent.com/631359345/bd77803e-61c1-4350-89f3-9f7112c8aab1)
 
-# Turkey Republic Identification Number Helpers
+    
+# TC Kimlik Doğrulama, Sorgulama ve Üretme
 
-This package enables algorithmic validation of Turkish Republic Identification Numbers (TCKN) and generates fake TCKN for testing purposes in a straightforward way.
+<div align="center">
+  <a href="https://github.com/emretnrvrd/tckn-php/blob/main/LICENSE"> 
+    <img src="https://img.shields.io/badge/License-MIT-green.svg">
+  </a>
+  <a href="https://github.com/emretnrvrd/tckn-php/blob/main/composer.json"> 
+    <img src="https://img.shields.io/badge/PHP->=7.4-blue">
+  </a>
+</div>
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+## Açıklama
 
-[![MIT License](https://img.shields.io/badge/PHP-%5E7.4-blue)](https://prototype.php.net/versions/7.4.0/)
+TC kimlik numarası için en kapsamlı pakettir. TC kimlik numaralarını algoritmik olarak doğrulamak, API aracılığıyla kimlik bilgilerini sorgulamak ve test amacıyla rastgele TC kimlik numaraları üretme işlevlerini içerir.
 
-
-
-
+[For English](https://github.com/emretnrvrd/tckn-php/blob/main/README_EN.md)
 
 
-## Installation
+## Özellikler
+
+- Algoritmik olarak TC Kimlik Numarası doğrulama
+- TC Nüfus ve Vatandaşlık İşleri (NVİ) API üzerinden TC Kimlik Sorgulaması (Ad, soyad ve doğum yılı gereklidir.)
+- Rastgele TC Kimlik Numarası Üretme
+
+  
+## İlişkili Projeler
+
+Eğer Laravel kullanıyorsanız bu paketi kullanmanız önerilir.
+
+[Laravel - TCKN](https://github.com/emretnrvrd/tckn-laravel)
+
+  
+## Yükleme 
 
 ```bash 
-  composer install emretnrvrd/tckn-helpers
+  composer require emretnrvrd/tckn
 ```
+    
+## Kullanım/Örnekler
 
-## Usages
 
-#### Import Tckn class
+#### Algoritmik Doğrulama
+Dönüş tipi her zaman bool tipindedir. Eğer TC Kimlik Numarası algoritmik olarak doğru ise "true", değilse "false" olarak dönecektir. 
 ```php
-use Emretnrvrd\TcknHelpers\Tckn;
-```
+use Emretnrvrd\Tckn\Services\TcknValidator\TcknValidator;
 
-#### Basic Usage
-```php
-$tckn = new Tckn("44873515636");
-// used randomly created and validated fake tckn.
-
-$tckn->validate(); 
+$tcknValidator = new TcknValidator(90626476730);
+$tcknValidotor->validate();
 //true
 
-$tckn->setValue("12345678910");
+/*-----OR-----*/
 
-$tckn->validate();
+$tcknValidator = new TcknValidator();
+$tcknValidator->setValue(90626476730);
+$tcknValidator->validate();
 //true
-```
 
-#### Generate Random Tckn
-```php
-$tckn = new Tckn();
-//value empty
+/*-----OR-----*/
 
-$randomTckn = $tckn->random();
-$tckn->setValue($randomTckn);
+// Helpers Usage
 
-$tckn->getValue(); 
-//44873515636
-
-$tckn->validate();
+validateTckn('90626476730');
 //true
 ```
 
-#### Helpers
-You don't need to use the Tckn class to accomplish the same functionality, as you can use helper functions instead.
-```php
-validateTckn("12345678910");
-// true or false
+#### API ile Sorgulama
+Dönüş tipi her zaman bool tipindedir. API ile doğrulama yaptığı için ad, soyad, doğum yılı ve TC kimlik numarası gerekmektedir.
+[API detayları için](https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?op=TCKimlikNoDogrula)
 
-randomTckn();
-// 44873515636
+```php
+use Emretnrvrd\Tckn\Services\TcknVerifier\TcknVerifier;
+
+$tcknVerifier = new TcknVerifier("Ahmet", "Demir", 1997, 12345678910);
+$tcknVerifier->verify();
+//false
+
+/*-----OR-----*/
+
+// Helpers Usage
+
+verifyTckn("Ahmet", "Demir", 1997, 12345678910);
+//false
 ```
 
-## Feedback
 
-If you have any feedback, please contact us at emretanrivedi28@gmail.com
+#### Rastgele Üretme
+Dönüş tipi her zaman string'dir. İçinde algoritmik doğrulamadan geçen rastgele bir TC kimlik numarası döndürür. (Sadece test amaçlı kullanmak için rastgele TC kimlik numarası üretir. Herhangi bir gerçek şahsa ait bir bilgi vs. içermemektedir.)
+
+```php
+use Emretnrvrd\Tckn\Services\TcknRandom\TcknRandom;
+
+$tcknRandom = new TcknRandom();
+$tcknRandom->generate();
+//"34909082386"
+
+/*-----OR-----*/
+
+// Helpers Usage
+
+generateTckn();
+//"34909082386"
+```
+## Lisans
+
+[MIT](https://github.com/emretnrvrd/tckn-php/blob/main/LICENSE)
+
+  
+## Geri Bildirim
+
+Herhangi bir geri bildiriminiz varsa, bana emretanriverdi28@gmail.com yada [@emretnrvrdi](https://twitter.com/emretnrvrdi) twitter adresinden bana ulaşabilirsiniz.
+
   

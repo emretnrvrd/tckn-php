@@ -1,4 +1,4 @@
-![Logo](https://repository-images.githubusercontent.com/631359345/bd77803e-61c1-4350-89f3-9f7112c8aab1)
+![Logo](https://repository-images.githubusercontent.com/631359345/366305c0-4516-41f7-8cdc-954dad970ffd)
 
     
 # Turkey Republic ID Number Validation, Verification, and Generation
@@ -21,7 +21,7 @@ This package is the most comprehensive package for the Turkey Republic ID number
 
 ## Features
 
-- Algorithmic validation of Turkish Republic ID Number
+- Algorithmic validation of Turkey Republic ID Number
 - Verifying Turkey Republic ID information through the Turkey Republic Population and Citizenship Affairs API (Requires name, surname, and birth year.)
 - Generating random Turkey Republic ID numbers
 
@@ -43,7 +43,7 @@ If you're using Laravel, we recommend using this package.
 
 #### Algorithmic Validation
 
-The return type is always boolean. If the Turkish ID number is algorithmically correct, it will return "true", otherwise "false".
+The return type is always boolean. If the Turkey Republic ID number is algorithmically correct, it will return "true", otherwise "false".
 
 ```php
 use Emretnrvrd\Tckn\Services\TcknValidator\TcknValidator;

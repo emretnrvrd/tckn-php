@@ -2,9 +2,7 @@
 
 namespace Emretnrvrd\Tckn\Services\TcknRandom;
 
-use Emretnrvrd\Tckn\Services\TcknValidator\TcknValidator;
 use Emretnrvrd\Tckn\Traits\TcknValidationDigitsCalculator;
-use SebastianBergmann\CodeCoverage\Report\PHP;
 
 class TcknRandom
 {

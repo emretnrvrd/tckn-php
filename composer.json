@@ -7,7 +7,7 @@
             "homepage": "https://github.com/emretnrvrd"
         }
     ],
-    "description": "This package is the most comprehensive package for the Turkish Republic ID number. It includes functions for algorithmically validating Turkish ID numbers, verifying identity information through an API and generating random Turkish ID numbers for testing purposes.",
+    "description": "This package is the most comprehensive package for the Turkey Republic ID number. It includes functions for algorithmically validating Turkey Republic ID numbers, verifying identity information through an API and generating random Turkey Republic ID numbers for testing purposes.",
     "type": "library",
     "keywords": ["tckn", "tc kimlik no", "api" , "doğrulama", "validator", "verify", "helpers"],
     "minimum-stability": "stable",
@@ -27,10 +27,10 @@
         "sort-packages": true
     },
     "license": "MIT",
-    "homepage": "https://github.com/emretnrvrd/tckn-helpers-php",
+    "homepage": "https://github.com/emretnrvrd/tckn-php",
     "readme": "README.md",
     "support": {
-        "issues": "https://github.com/emretnrvrd/tckn-helpers-php/issues",
-        "source": "https://github.com/emretnrvrd/tckn-helpers-php"
+        "issues": "https://github.com/emretnrvrd/tckn-php/issues",
+        "source": "https://github.com/emretnrvrd/tckn-php"
     }
 }

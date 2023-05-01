@@ -22,7 +22,7 @@ TC kimlik numarası için en kapsamlı pakettir. TC kimlik numaralarını algori
 ## Özellikler
 
 - Algoritmik olarak TC Kimlik Numarası doğrulama
-- Nüfus ve Vatandaşlık İşleri (NVI) API üzerinden TC Kimlik Sorgulaması (Ad, soyad ve doğum yılı gereklidir.)
+- TC Nüfus ve Vatandaşlık İşleri (NVİ) API üzerinden TC Kimlik Sorgulaması (Ad, soyad ve doğum yılı gereklidir.)
 - Rastgele TC Kimlik Numarası Üretme
 
   
@@ -110,6 +110,6 @@ generateTckn();
   
 ## Geri Bildirim
 
-Herhangi bir geri bildiriminiz varsa, lütfen emretanriverdi28@gmail.com yada @emretnrvrdi twitter adresinden bana ulaşabilirsiniz.
+Herhangi bir geri bildiriminiz varsa, bana emretanriverdi28@gmail.com yada [@emretnrvrdi](https://twitter.com/emretnrvrdi) twitter adresinden bana ulaşabilirsiniz.
 
   
